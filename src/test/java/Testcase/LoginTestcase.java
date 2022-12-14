@@ -25,14 +25,15 @@ public class LoginTestcase extends BaseClass {
 		LPO.clickOnLogin().click();
 		
 		/*SoftAssert assertion=new SoftAssert();
-		                                                  //String actual=error.getText();
+		                                                    //String actual=error.getText();
 		String Expected=constants.errormessage;
 		                                                     // WebElement actual=driver.findElement(By.xpath("//div[@id='error']"));(it is not allowed in testcase class)
 		
 		
 	     assertion.assertEquals(LPO.error().getText(), Expected);
 	      assertion.assertAll();*/
-		commonMethods.handleAssertion(LPO.error().getText(),constants.errormessage);
+		  commonMethods.handleAssertion(LPO.error().getText(), constants.errormessage);
+
 	
 	}
 	

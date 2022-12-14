@@ -15,13 +15,16 @@ public class commonMethods {
 		Select s=new Select(dropdown);
 		s.selectByIndex(Index);
 	}
-	public static void handleAssertion(String actualString,String expectedString) {
-
+	public static void handleAssertion(String ActualError,String ExpectedError ) {
 		SoftAssert assertion=new SoftAssert();
-        String Expected=constants.errormessage;
-	
-	    assertion.assertEquals(LPO.error().getText(), Expected);
-	    assertion.assertAll();
+		String actual=ActualError;
+		String Expected=ExpectedError;
+		 assertion.assertEquals(actual, Expected);
+	      assertion.assertAll();
+		
+		
 	}
 
-}
+	}
+
+
