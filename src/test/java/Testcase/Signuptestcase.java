@@ -26,13 +26,14 @@ public class Signuptestcase extends BaseClass {
 		SPO.enterjobTitle().sendKeys(constants.jobTitle);
 		SPO.enterEmailId().sendKeys(constants.EmailId);
 		SPO.enterphoneNo().sendKeys(constants.phoneNo);
+		SPO.entercompany().sendKeys(constants.company);
 		
 		
 		commonMethods.SelectDropdown(SPO.SelectCompanyEmployees(), 1);
 		//Select s=new Select(SPO.SelectCompanyEmployees());
 		//s.selectByIndex(1);
 		//SPO.Selectcountry().sendKeys(constants.company);
-		commonMethods.SelectDropdown(SPO.Selectcountry(), 1);
+		commonMethods.SelectDropdown(SPO.Selectcountry(), 4);
 		//Select s1=new Select(SPO.Selectcountry());
 		//s1.selectByIndex(1);
 		SPO.clickOncheckbox().click();

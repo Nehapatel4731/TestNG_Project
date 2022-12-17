@@ -12,8 +12,10 @@ import org.testng.annotations.BeforeMethod;
 public class BaseClass {
 	public WebDriver driver;
 	public void browseInitialization() throws IOException {
-		//to read the browser files--
-		FileInputStream fis=new FileInputStream("C:\\Users\\Lucky\\eclipse-workspace\\19sepseleniumTestng\\src\\main\\java\\Resources\\data.properties");
+		//to read the browser files-- 
+		String path="C:\\Users\\Lucky\\eclipse-workspace\\19sepseleniumTestng\\src\\main\\java\\Resources\\data.properties";
+		//FileInputStream fis=new FileInputStream("C:\\Users\\Lucky\\eclipse-workspace\\19sepseleniumTestng\\src\\main\\java\\Resources\\data.properties");
+		FileInputStream fis=new FileInputStream(path);
 	     //to acees the properties file
 		Properties prop=new Properties();//(C:\\Users\\Lucky\\eclipse-workspace\\19sepseleniumTestng)ki jagag par
 		prop.load(fis);                  //System.getproperty("user.dir")+"\\src\\main\\java\\Resources\\data.properties"rakh denge
@@ -22,7 +24,7 @@ public class BaseClass {
 	       if(browserName.equalsIgnoreCase("chrome")) {
 	    	  // System.setProperty(browserName, browserName)
 	    	   
-	           driver=new ChromeDriver();
+	           driver= new ChromeDriver();
 	     }
 	       else if(browserName.equalsIgnoreCase("firefox")) {
 	    	
